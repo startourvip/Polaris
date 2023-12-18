@@ -114,7 +114,7 @@ export const mapo = defineChain({
   },
 });
 export const wemix = defineChain({
-  id: 109,
+  id: 1111,
   name: "wemix",
   network: "wemix",
   nativeCurrency: {
