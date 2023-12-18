@@ -135,6 +135,28 @@ export const wemix = defineChain({
     default: { name: "Explorer", url: "https://explorer.wemix.com" },
   },
 });
+export const iotx = defineChain({
+  id: 4689,
+  name: "iotx",
+  network: "iotx",
+
+  nativeCurrency: {
+    decimals: 18,
+    name: "iotx",
+    symbol: "iotx",
+  },
+  rpcUrls: {
+    default: {
+      http: ["https://rpc.ankr.com/iotex"],
+    },
+    public: {
+      http: ["https://rpc.ankr.com/iotex"],
+    },
+  },
+  blockExplorers: {
+    default: { name: "Explorer", url: "https://iotexscan.io/" },
+  },
+});
 export const inscriptionChains = {
   eth: mainnet,
   bsc,
@@ -164,7 +186,8 @@ export const inscriptionChains = {
   filecoin,
   shibarium,
   sepolia,
-  wemix
+  wemix,
+  iotx
 };
 
 export type ChainKey = keyof typeof inscriptionChains;
