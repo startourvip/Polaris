@@ -23,7 +23,7 @@ import {
   optimism,
   polygon,
   sepolia,
-  zkSync,
+  zkSync
 } from "viem/chains";
 
 export const shibarium = defineChain({
@@ -113,7 +113,27 @@ export const mapo = defineChain({
     default: { name: "Explorer", url: "https://mapscan.io" },
   },
 });
-
+export const wemix = defineChain({
+  id: 109,
+  name: "wemix",
+  network: "wemix",
+  nativeCurrency: {
+    decimals: 18,
+    name: "wemix",
+    symbol: "wemix",
+  },
+  rpcUrls: {
+    default: {
+      http: ["https://api.wemix.com"],
+    },
+    public: {
+      http: ["https://api.wemix.com"],
+    },
+  },
+  blockExplorers: {
+    default: { name: "Explorer", url: "https://explorer.wemix.com" },
+  },
+});
 export const inscriptionChains = {
   eth: mainnet,
   bsc,
@@ -143,6 +163,7 @@ export const inscriptionChains = {
   filecoin,
   shibarium,
   sepolia,
+  wemix
 };
 
 export type ChainKey = keyof typeof inscriptionChains;
