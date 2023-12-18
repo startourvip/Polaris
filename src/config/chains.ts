@@ -117,6 +117,7 @@ export const wemix = defineChain({
   id: 1111,
   name: "wemix",
   network: "wemix",
+
   nativeCurrency: {
     decimals: 18,
     name: "wemix",
