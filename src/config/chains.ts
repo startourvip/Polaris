@@ -157,6 +157,28 @@ export const iotx = defineChain({
     default: { name: "Explorer", url: "https://iotexscan.io/" },
   },
 });
+export const meter = defineChain({
+  id: 82,
+  name: "Meter",
+  network: "Meter",
+
+  nativeCurrency: {
+    decimals: 18,
+    name: "mtr",
+    symbol: "mtr",
+  },
+  rpcUrls: {
+    default: {
+      http: ["https://meter.blockpi.network/v1/rpc/public"],
+    },
+    public: {
+      http: ["https://meter.blockpi.network/v1/rpc/public"],
+    },
+  },
+  blockExplorers: {
+    default: { name: "Explorer", url: "https://iotexscan.io/" },
+  },
+});
 export const inscriptionChains = {
   eth: mainnet,
   bsc,
@@ -187,7 +209,8 @@ export const inscriptionChains = {
   shibarium,
   sepolia,
   wemix,
-  iotx
+  iotx,
+  meter
 };
 
 export type ChainKey = keyof typeof inscriptionChains;
